@@ -9,3 +9,4 @@ console.log(m2)
 
 m2.ping()
 m2.sayHello()
+m2.run()
