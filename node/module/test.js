@@ -8,3 +8,4 @@ const m2 = require('./module2')
 console.log(m2)
 
 m2.ping()
+m2.sayHello()

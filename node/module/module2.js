@@ -14,3 +14,10 @@ function ping() {
 module.exports = {
   ping
 }
+
+
+module.exports.sayHello = () => {
+  console.log("sayHello come from module2");
+}
+
+// 一个模块对外导出的成员永远以 module.exports 指向的对象为准
