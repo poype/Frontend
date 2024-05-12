@@ -41,12 +41,34 @@ npm install 包的完整名称
 npm i 包的完整名称
 
 npm i moment@2.22.2
+
+一次安装package.json文件中dependencies中所有的依赖
+npm install
+或
+npm i
 ```
 
 ### 2. 初始化项目，创建package.json配置文件
 ```
 npm init
 ```
+
+### 3. 卸载包
+```
+npm uninstall moment
+```
+会自动更新package.json配置文件，把卸载包对应的包名从dependencies中删除。
+
+
+### 4. 安装devDependencies
+```
+npm i 包名 -D
+或
+npm install 包名 --save-dev
+
+npm install webpack --save-dev
+```
+在项目的开发过程中会用到，项目上线之后就不会再用到的包。
 
 
 
