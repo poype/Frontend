@@ -1,0 +1,19 @@
+{
+  "name": "study_yarn",
+  "version": "1.0.0",
+  "description": "study how to use yarn tool",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dayjs": "^1.11.11",
+    "jquery": "^3.7.1",
+    "moment": "^2.30.1"
+  },
+  "devDependencies": {
+    "webpack": "^5.91.0"
+  }
+}
