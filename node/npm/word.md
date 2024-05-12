@@ -29,7 +29,37 @@ npm i moment@2.22.2
 在项目根目录下，必须提供 package.json 配置文件。
 
 
+## 5 淘宝 NPM 镜像服务器
+查看当前 npm 下包的服务器地址：
+```
+npm config get registry
+```
+服务器地址默认是 `https://registry.npmjs.org/`
 
+将下包的镜像源切换为淘宝的服务器地址：
+```
+npm config set registry=https://registry.npm.taobao.org/
+```
+
+使用 nrm 切换下包镜像源
+```
+先全局安装nrm
+npm install nrm -g
+
+查看所有可用的镜像源，*表示正在使用的镜像源
+$ nrm ls
+* npm ---------- https://registry.npmjs.org/
+  yarn --------- https://registry.yarnpkg.com/
+  tencent ------ https://mirrors.cloud.tencent.com/npm/
+  cnpm --------- https://r.cnpmjs.org/
+  taobao ------- https://registry.npmmirror.com/
+  npmMirror ---- https://skimdb.npmjs.com/registry/
+
+use 命令切换镜像源
+$ nrm use tencent
+ SUCCESS  The registry has been changed to 'tencent'.
+
+```
 
 
 

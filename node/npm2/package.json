@@ -10,6 +10,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "ant-design": "^1.0.0",
+    "antd": "^5.17.0",
+    "bootstrap": "^5.3.3",
     "dayjs": "^1.11.11"
   },
   "devDependencies": {
