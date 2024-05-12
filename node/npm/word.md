@@ -61,6 +61,17 @@ $ nrm use tencent
 
 ```
 
+## 6 npm全局安装位置
+```
+C:\Users\用户目录\AppData\Roaming\npm\node_modules
+```
+
+## 7 包的规范
+1. 包必须以单独的目录存在
+2. 包的根目录中必须包含package.json配置文件
+3. package.json文件中必须包含 name、version、main 这三个属性，分别代表包的名字、版本号、包的入口。
+    所谓包的入口就是外界通过require导入这个包的时候导入的是哪个文件。
+
 
 
 # npm 命令汇总
@@ -99,6 +110,13 @@ npm install 包名 --save-dev
 npm install webpack --save-dev
 ```
 在项目的开发过程中会用到，项目上线之后就不会再用到的包。
+
+### 5. 安装和卸载全局包
+```
+npm install 包名 -g
+npm uninstall 包名 -g
+```
+
 
 
 
