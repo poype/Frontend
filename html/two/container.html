@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Container</title>
+    <style>
+      .product {
+        background-color: gold;
+        width: 300px;
+      }
+
+      .highlight {
+        background-color: red;
+      }
+
+      img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="product">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+      <a href="#">Link</a>
+    </div>
+
+    <p>
+      <span class="highlight">ipsum</span> dolor sit amet, consectetur
+      adipisicing elit.
+    </p>
+
+    <!-- semantic container -->
+    <article>
+      <h1>Heading</h1>
+      <p>
+        <mark>Lorem</mark>, ipsum dolor sit amet consectetur adipisicing elit.
+        Commodi nulla quo enim beatae quis voluptatibus culpa facere architecto
+        odio officiis itaque magni, provident voluptas molestias deleniti
+        excepturi iure quisquam? Nobis.
+      </p>
+      <figure>
+        <img src="/one/images/coffee.jpg" alt="coffee" />
+        <figcaption>My coffee this morning</figcaption>
+      </figure>
+    </article>
+
+    <!-- Structuring Web Page -->
+    <header>
+      <!-- introduction of content, which can belong to page, or section, or article  -->
+      <nav>
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!-- main content of page, every page should have only one main element -->
+      <section>
+        <!-- group related content -->
+        <h2>Products</h2>
+        <article></article>
+        <article></article>
+      </section>
+      <section>
+        <h2>Testimonial</h2>
+        <article></article>
+        <article></article>
+      </section>
+    </main>
+    <aside></aside>
+    <!-- not direct related to the main content -->
+    <footer>
+      <!-- like header -->
+      <nav>
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+      </nav>
+    </footer>
+  </body>
+</html>
+
+<!--
+div: block level element
+span: inline element
+HTML5 introduced many semantic container elements, like article, mark and figure.
+-->
