@@ -92,3 +92,8 @@ Relational Seclectors
   content: "!! before insert !!";
   display: block;
 }
+
+/* 
+Selector Specificty:
+ID selector > class & attribute selectors > element selectors
+ */
