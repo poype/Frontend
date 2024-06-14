@@ -13,3 +13,29 @@ a[target] {
 a[href^="https"][href$=".com"] {
   color: orange;
 }
+
+/* for all p elements inside #parent */
+#parent p {
+  background-color: gold;
+}
+
+/* direct children of #parent */
+#parent > p {
+  font-weight: bold;
+}
+
+/* Direct Sibling */
+#parent + p {
+  background-color: greenyellow;
+}
+
+/* General Sibling */
+#parent ~ p {
+  color: red;
+}
+
+/* 
+Relational Seclectors
+1. Can be fragile
+2. Not as fast as basic selectors
+*/
