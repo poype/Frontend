@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance</title>
+    <style>
+      p {
+        color: dodgerblue;
+        border: 1px brown solid;
+      }
+
+      strong {
+        color: initial;
+      }
+      /* 
+      by default, strong element inherit the value of color attribute from p element
+      make strong element doesn't inherit color attribute 
+      */
+
+      em {
+        border: inherit;
+      }
+      /* 
+      by default, em element doesn't inherit the value of border attribute from p element.
+      make em element inherit border attribute 
+      */
+    </style>
+  </head>
+  <body>
+    <p>Lorem ipsum <strong>dolor</strong> sit <em>amet</em>.</p>
+  </body>
+</html>
