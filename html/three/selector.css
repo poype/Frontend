@@ -73,3 +73,22 @@ Relational Seclectors
 .pseudo5 a:focus {
   color: deeppink;
 }
+
+/* Pseudo-element Selectors */
+.pseudo6 p::first-letter {
+  color: red;
+  font-weight: bold;
+}
+
+.pseudo6 p::first-line {
+  background-color: dodgerblue;
+}
+
+.pseudo6 p::selection {
+  background-color: pink;
+}
+
+.pseudo6 p::before {
+  content: "!! before insert !!";
+  display: block;
+}
