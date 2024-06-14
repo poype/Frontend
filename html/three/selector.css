@@ -1,0 +1,15 @@
+body {
+  margin: 10px;
+}
+
+#products {
+  background-color: aqua;
+}
+
+a[target] {
+  color: red;
+}
+
+a[href^="https"][href$=".com"] {
+  color: orange;
+}
