@@ -39,3 +39,37 @@ Relational Seclectors
 1. Can be fragile
 2. Not as fast as basic selectors
 */
+
+/* Pseudo-class Selectors */
+.pseudo1 :first-child {
+  font-size: 140%;
+  font-style: italic;
+}
+
+.pseudo2 :first-of-type {
+  font-size: 110%;
+  color: blueviolet;
+}
+
+.pseudo3 p:first-of-type {
+  font-size: 110%;
+  font-weight: bold;
+  color: rgb(37, 135, 168);
+}
+
+.pseudo4 ul li:nth-child(odd) {
+  color: pink;
+}
+
+.pseudo4 ul li:nth-child(even) {
+  color: green;
+}
+
+.pseudo5 a:visited {
+  color: dodgerblue;
+}
+
+.pseudo5 a:hover,
+.pseudo5 a:focus {
+  color: deeppink;
+}
