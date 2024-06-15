@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Measurement Units</title>
+    <style>
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: gold;
+        border: 3px solid blue;
+        /* pixel value is suitable for border, no matter how big the screen is, the size of border should not be changed */
+      }
+
+      .container {
+        width: 400px;
+        height: 400px;
+      }
+
+      .box2 {
+        /* width and height here are 200px, because width and height of parent are 400px  */
+        width: 50%;
+        height: 50%;
+        background-color: pink;
+      }
+
+      .box3 {
+        /* 50% of width of viewport  */
+        width: 50vw;
+        /* 50% of height of viewport */
+        height: 50vh;
+        background-color: tomato;
+      }
+
+      .box4 {
+        /* 10 x font size of the current element -- 10 * 16px = 160px  */
+        width: 10em;
+        /* 10 x font size of the root element -- 10 * 16px = 160px  */
+        height: 10rem;
+        background-color: rgb(95, 145, 166);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box"></div>
+
+    <div class="container">
+      <div class="box2"></div>
+    </div>
+
+    <div class="box3"></div>
+
+    <div class="box4"></div>
+  </body>
+</html>
+
+<!-- 
+Absolute: px
+Relative: 
+%          relative to the size of container
+vw, vh     relative to the viewport
+em, rem    relative to the font size
+-->
+
+<!-- by default, the width of block level elements are 100%, but the height is 0  -->
