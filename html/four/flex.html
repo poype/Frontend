@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FlexBox</title>
+
+    <style>
+      .container {
+        border: 3px solid lightblue;
+        display: flex;
+        flex-direction: row;
+        /* Main Axis, default value is flex-start */
+        justify-content: center;
+        /* Cross Axis */
+        align-items: flex-end;
+        height: 90vh;
+        /* flex-wrap and align-content can be used when there are many elements in one row so that one row can not fit all elments */
+        /* flex-wrap: wrap; */
+        /* align-content: center; */
+      }
+
+      .box {
+        width: 5rem;
+        height: 5rem;
+        background-color: gold;
+        margin: 1rem;
+      }
+
+      /* for flex items */
+      .one {
+        /* only move one element to center */
+        /* override the value set by align-items */
+        align-self: flex-start;
+        /* no any attribute can override the value set by justify-content  */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box one">A</div>
+      <div class="box">B</div>
+      <div class="box">C</div>
+    </div>
+  </body>
+</html>
+
+<!-- 
+Aligning Items
+
+Main(primary)
+justify-content
+
+Cross(secondary)
+align-items
+
+-->
