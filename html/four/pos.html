@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning</title>
+
+    <style>
+      body {
+        height: 1000vh;
+      }
+
+      .boxes {
+        border: 3px solid rgb(23, 185, 239);
+      }
+
+      .box {
+        width: 5em;
+        height: 5em;
+      }
+
+      .box-one {
+        background-color: gold;
+      }
+
+      .box-two {
+        background-color: tomato;
+        /* relative to the element's normal position */
+        position: relative;
+        left: 3rem;
+        bottom: 3rem;
+        z-index: -1;
+      }
+
+      .box-three {
+        background-color: dodgerblue;
+      }
+
+      .boxes2 {
+        border: 3px solid rgb(23, 185, 239);
+        position: relative;
+      }
+
+      .box2 {
+        width: 5em;
+        height: 5em;
+      }
+
+      .box-one2 {
+        background-color: gold;
+      }
+
+      .box-two2 {
+        background-color: tomato;
+        /* with absolute positioning, position the element relative to it's parent container */
+        /* to use absolute position, we need to make the position value of it's parent container to "relative" first  */
+        position: absolute;
+        right: 0;
+        bottom: 0;
+      }
+
+      .box-three2 {
+        background-color: dodgerblue;
+      }
+
+      .box3 {
+        /* position element relative to the viewport */
+        position: fixed;
+        width: 5em;
+        height: 5em;
+        background-color: aquamarine;
+        top: 0;
+        right: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <div class="box box-one"></div>
+      <div class="box box-two"></div>
+      <div class="box box-three"></div>
+    </div>
+
+    <div class="boxes2">
+      <div class="box2 box-one2"></div>
+      <div class="box2 box-two2"></div>
+      <div class="box2 box-three2"></div>
+    </div>
+
+    <div class="box3">Box3</div>
+  </body>
+</html>
