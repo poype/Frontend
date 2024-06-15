@@ -35,9 +35,15 @@
       }
 
       .box3 {
-        width: 500px;
-        height: 500px;
+        width: 100px;
+        height: 100px;
         background-color: pink;
+        display: inline-block;
+        /* 
+        inline-block: combination of inline and block 
+        just like block level elements, we can give the elements width and height
+        just like inline level elements, these elements are not inserted on the new line.
+        */
       }
     </style>
   </head>
@@ -46,6 +52,8 @@
     <div class="box2"></div>
 
     <!-- inline elements don't respect with and height two css attributes -->
-    <span class="box3">123</span>
+    <span class="box3">one</span>
+    <span class="box3">two</span>
+    <span class="box3">three</span>
   </body>
 </html>
