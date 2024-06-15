@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Floating</title>
+
+    <style>
+      .tweet {
+        border: 3px solid pink;
+        margin: 10px;
+      }
+
+      /* by default, parament containers don't see the float elements */
+      .avatar {
+        width: 5rem;
+        height: 5rem;
+        background-color: gold;
+        float: left;
+        margin-right: 0.5rem;
+      }
+      /* clear float */
+      .clear {
+        clear: both;
+      }
+
+      .avatar2 {
+        width: 5rem;
+        height: 5rem;
+        background-color: gold;
+        float: left;
+        margin-right: 0.5rem;
+      }
+
+      /* to make tweet can fit avatar2 */
+      .tweet::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+    </style>
+  </head>
+  <body>
+    <article class="tweet">
+      <div class="avatar"></div>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p class="clear">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+        accusantium magnam rem obcaecati. Perspiciatis provident deserunt
+        necessitatibus praesentium tempore suscipit officiis quia. Fugit,
+        doloribus! Eos illo nisi ea amet dicta velit odit unde, architecto
+        debitis tempore voluptate dolore impedit omnis distinctio modi vel
+        sequi. Facilis ex quos tempora in eligendi.
+      </p>
+    </article>
+
+    <article class="tweet">
+      <div class="avatar2"></div>
+    </article>
+  </body>
+</html>
+
+<!-- You shouldn't use float to build layout -->
