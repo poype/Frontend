@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Query</title>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .box {
+        padding: 1rem;
+      }
+
+      .one {
+        background-color: gold;
+      }
+
+      .two {
+        background-color: dodgerblue;
+      }
+
+      @media screen and (min-width: 600px) {
+        /* the rules defined at here will override original rules */
+        .container {
+          flex-direction: row;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box one">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolor
+          voluptates vero natus expedita vel similique dignissimos explicabo
+          illo in. Repudiandae!
+        </p>
+      </div>
+      <div class="box two">
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veniam error
+          dolor neque a consequuntur illum repellendus voluptates ullam
+          architecto accusamus, temporibus quia, ipsa deleniti nihil corporis
+          provident vitae doloremque enim.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
