@@ -1,11 +1,11 @@
 import "./App.css";
 import "./components/HelloWorld";
-import HelloWorld from "./components/HelloWorld";
+import CityListGroup from "./components/CityListGroup";
 
 function App() {
   return (
     <div>
-      <HelloWorld />
+      <CityListGroup />
     </div>
   );
 }
