@@ -1,6 +1,7 @@
 import "./App.css";
 import "./components/HelloWorld";
 import ListGroup from "./components/ListGroup";
+import Alert from "./components/Alert";
 
 function App() {
   const cityList: string[] = ["北京", "上海", "广州", "深圳", "杭州", "哈尔滨"];
@@ -28,6 +29,10 @@ function App() {
         alt="React state vs props"
         className="w-75"
       />
+
+      <Alert>
+        <span>Hello World</span>
+      </Alert>
     </div>
   );
 }
