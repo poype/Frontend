@@ -22,6 +22,12 @@ function App() {
         heading="Color List"
         onSelectItem={handleSelectItem}
       />
+
+      <img
+        src="/src/assets/state_vs_props.png"
+        alt="React state vs props"
+        className="w-75"
+      />
     </div>
   );
 }
