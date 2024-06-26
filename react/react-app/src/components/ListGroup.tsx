@@ -1,8 +1,11 @@
 import { MouseEvent, useState } from "react";
 
-function CityListGroup() {
-  const cityList: string[] = ["北京", "上海", "广州", "深圳", "杭州", "哈尔滨"];
+interface Props {
+  items: string[];
+  heading: string;
+}
 
+function ListGroup({ items, heading }: Props) {
   const [selectedIndex, setSelectedIndex] = useState(-1);
 
   const handleClick = (event: MouseEvent) => {
@@ -17,10 +20,10 @@ function CityListGroup() {
 
   return (
     <>
-      <h1>City List</h1>
-      {cityList.length === 0 && <p>No item found</p>}
+      <h1>{heading}</h1>
+      {items.length === 0 && <p>No item found</p>}
       <ul className="list-group">
-        {cityList.map((city, index) => (
+        {items.map((city, index) => (
           <li
             key={city}
             className={
@@ -44,4 +47,4 @@ function CityListGroup() {
   );
 }
 
-export default CityListGroup;
+export default ListGroup;
