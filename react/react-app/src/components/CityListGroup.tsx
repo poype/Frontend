@@ -1,7 +1,9 @@
-import { MouseEvent } from "react";
+import { MouseEvent, useState } from "react";
 
 function CityListGroup() {
   const cityList: string[] = ["北京", "上海", "广州", "深圳", "杭州", "哈尔滨"];
+
+  const [selectedIndex, setSelectedIndex] = useState(-1);
 
   const handleClick = (event: MouseEvent) => {
     // The exact type of event is SyntheticBaseEvent, this is one of built-in classes in react
@@ -21,11 +23,17 @@ function CityListGroup() {
         {cityList.map((city, index) => (
           <li
             key={city}
-            className="list-group-item"
+            className={
+              selectedIndex === index
+                ? "list-group-item active"
+                : "list-group-item"
+            }
             onClick={(event) => {
               // The arrow function can have a optional parameter represent browser event
               console.log(city, index);
               handleClick(event);
+
+              setSelectedIndex(index);
             }}
           >
             {city}
