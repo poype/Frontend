@@ -6,10 +6,22 @@ function App() {
   const cityList: string[] = ["北京", "上海", "广州", "深圳", "杭州", "哈尔滨"];
   const colorList = ["red", "yellow", "blue", "green", "orange"];
 
+  const handleSelectItem = (item: String) => {
+    console.log(item + " is selected");
+  };
+
   return (
     <div>
-      <ListGroup items={cityList} heading="City List" />
-      <ListGroup items={colorList} heading="Color List" />
+      <ListGroup
+        items={cityList}
+        heading="City List"
+        onSelectItem={handleSelectItem}
+      />
+      <ListGroup
+        items={colorList}
+        heading="Color List"
+        onSelectItem={handleSelectItem}
+      />
     </div>
   );
 }
