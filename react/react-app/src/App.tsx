@@ -2,6 +2,7 @@ import "./App.css";
 import "./components/HelloWorld";
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
+import Button from "./components/Button";
 
 function App() {
   const cityList: string[] = ["北京", "上海", "广州", "深圳", "杭州", "哈尔滨"];
@@ -33,6 +34,10 @@ function App() {
       <Alert>
         <span>Hello World</span>
       </Alert>
+
+      <Button color="danger" onClick={() => console.log("clicked")}>
+        My Button
+      </Button>
     </div>
   );
 }
