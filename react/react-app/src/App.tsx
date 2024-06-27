@@ -3,8 +3,11 @@ import "./components/HelloWorld";
 import ListGroup from "./components/ListGroup";
 import Alert from "./components/Alert";
 import Button from "./components/Button";
+import { useState } from "react";
 
 function App() {
+  const [alertVisible, setAlertVisibility] = useState(false);
+
   const cityList: string[] = ["北京", "上海", "广州", "深圳", "杭州", "哈尔滨"];
   const colorList = ["red", "yellow", "blue", "green", "orange"];
 
@@ -31,13 +34,18 @@ function App() {
         className="w-75"
       />
 
-      <Alert>
-        <span>Hello World</span>
-      </Alert>
+      <div>
+        {/* Notice the way that hide the component */}
+        {alertVisible && (
+          <Alert onClose={() => setAlertVisibility(false)}>
+            <span>Hello World</span>
+          </Alert>
+        )}
 
-      <Button color="danger" onClick={() => console.log("clicked")}>
-        My Button
-      </Button>
+        <Button color="danger" onClick={() => setAlertVisibility(true)}>
+          My Button
+        </Button>
+      </div>
     </div>
   );
 }
