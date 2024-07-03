@@ -1,0 +1,19 @@
+/* rename css file, add "module" word in filename */
+
+/* to avoid use ugly brackets, use camel notation to replace hyphen "-"  */
+.vanillaCss1 {
+  width: 100px;
+  height: 100px;
+  background-color: dodgerblue
+}
+
+.one {
+  width: 200px;
+  height: 200px;
+}
+
+.two {
+  background-color: gold;
+}
+
+/* Vite takes all the css modules and create unique class name base the class name here */
