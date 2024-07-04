@@ -9,6 +9,8 @@ function Block() {
       <div className={styles.vanillaCss1}></div>
       {/* mutiple css class name */}
       <div className={[styles.one, styles.two].join(' ')}></div>
+
+      <p style={{backgroundColor: "blue", color: "red"}}>test inline css</p>
     </>
     
   );
