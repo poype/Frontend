@@ -1,17 +1,19 @@
 import "./App.css";
 import "./components/HelloWorld";
-import Block from "./components/vanilla_css/";
-// If we don't supply a file and here we are referencing a folder, the compiler will look for a file called index.
 import "./App.css";
 // vanilla css has a problem that same class name in different css file impact each other. name clashes
 
-import Like from "./components/Like";
+import ExpandableText from "./components/ExpandableText";
 
 function App() {
   return (
     <>
-      <Block />
-      <Like onClick={() => console.log("like clicked")} />
+      <ExpandableText maxChars={20}>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
+        soluta doloremque consequuntur ullam fugiat blanditiis, aspernatur sed
+        eius iure eos quae perferendis? Assumenda quisquam fuga et consequatur
+        quam? Rerum, ipsa.
+      </ExpandableText>
     </>
   );
 }
