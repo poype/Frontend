@@ -1,14 +1,13 @@
-import "./App.css";
 import "./components/HelloWorld";
 import "./App.css";
 // vanilla css has a problem that same class name in different css file impact each other. name clashes
 
-import { Form4 } from "./components/Form";
+import ExpenseTracker from "./components/Form/ExpenseTracker";
 
 function App() {
   return (
     <>
-      <Form4/>
+      <ExpenseTracker />
     </>
   );
 }
