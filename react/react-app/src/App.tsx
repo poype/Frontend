@@ -2,12 +2,12 @@ import "./components/HelloWorld";
 import "./App.css";
 // vanilla css has a problem that same class name in different css file impact each other. name clashes
 
-import ExpenseTracker from "./components/Form/ExpenseTracker";
+import TestUseEffect from "./components/Effect/TestUseEffect";
 
 function App() {
   return (
     <>
-      <ExpenseTracker />
+      <TestUseEffect />
     </>
   );
 }
