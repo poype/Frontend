@@ -10,19 +10,23 @@ interface User {
 
 const TestAxios = () => {
   const [users, setUsers] = useState<User[]>([]);
+  const [error, setError] = useState<string>('');
 
   useEffect(() => {
     // https://jsonplaceholder.typicode.com/   利用jsonplaceholder作为backend
-    axios.get<User[]>("https://jsonplaceholder.typicode.com/users").then((res) => {
-      // 这里的res对象是Axios对HTTP Response的一个封装，res对象中包含status、headers等属性
-      console.log(res)
-      // 后端返回的数据被封装到res对象中的data字段
-      setUsers(res.data)
-    });
+    axios.get<User[]>("https://jsonplaceholder.typicode.com/users")
+      .then((res) => {
+        // 这里的res对象是Axios对HTTP Response的一个封装，res对象中包含status、headers等属性
+        console.log(res);
+        // 后端返回的数据被封装到res对象中的data字段
+        setUsers(res.data);
+      })
+      .catch((err) => setError(err.message));
   }, []);
 
   return (
     <div>
+      {error && <p className="text-danger">{error}</p>}
       <ul>
         {users.map((user) => <li key={user.id}>
           <ol className="mb-3">
