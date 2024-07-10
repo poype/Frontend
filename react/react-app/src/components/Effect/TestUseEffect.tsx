@@ -13,6 +13,14 @@
 import { useEffect, useRef } from "react";
 
 
+const connect = () => {
+  console.log("Connecting")
+}
+
+const disconnect = () => {
+  console.log("Disconnecting")
+}
+
 const TestUseEffect = () => {
   const ref = useRef<HTMLInputElement>(null);
 
@@ -26,6 +34,13 @@ const TestUseEffect = () => {
   // another effect hook, 
   useEffect(() => {
     document.title = "Test Effect";
+  })
+
+  useEffect(() => {
+    connect();
+
+    // the method which return here is cleaning up function 
+    return () => disconnect()
   })
   
 
