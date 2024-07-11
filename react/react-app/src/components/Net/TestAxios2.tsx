@@ -11,11 +11,14 @@ interface User {
 const TestAxios2 = () => {
   const [users, setUsers] = useState<User[]>([]);
   const [error, setError] = useState<string>('');
+  const [isLoading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
     const fetchUser = async () => {
       // catch clause is converted to try-catch block
       try {
+        setLoading(true);
+
         const res = await axios.get<User[]>(
           "https://jsonplaceholder.typicode.com/users"
         );
@@ -24,6 +27,8 @@ const TestAxios2 = () => {
 
         // as: type assertion
         setError((err as AxiosError).message);
+      } finally {
+        setLoading(false);
       }
     };
 
@@ -32,6 +37,7 @@ const TestAxios2 = () => {
 
   return (
     <div>
+      {isLoading && <div className="spinner-border"></div>}
       {error && <p className="text-danger">{error}</p>}
       <ul>
         {users.map((user) => <li key={user.id}>
