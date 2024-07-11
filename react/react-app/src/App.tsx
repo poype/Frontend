@@ -3,12 +3,12 @@ import "./App.css";
 // vanilla css has a problem that same class name in different css file impact each other. name clashes
 
 
-import TestAxios from "./components/Net/TestAxios";
+import TestAxios2 from "./components/Net/TestAxios2";
 
 function App() {
   return (
     <>
-      <TestAxios />
+      <TestAxios2 />
     </>
   );
 }
