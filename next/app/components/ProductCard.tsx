@@ -1,10 +1,11 @@
 "use client"
 
 import React from "react";
+import styles from "./ProductCard.module.css"
 
 const ProductCard = () => {
   return (
-    <div>
+    <div className={styles.cardContainer}>
       <button onClick={() => console.log('Click')}>Add to Cart</button>
     </div>
   )

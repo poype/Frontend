@@ -1,0 +1,19 @@
+/* 
+CSS module is a CSS file that is scoped to a page or a component.
+It's a way to prevent styles from clashing or overwriting each other.
+
+the extension of css module has to be .module.css
+
+The classes that we define in this css module will become properties of the styles object which imported in other page file.
+
+Next.js use postcss to transform class names and generate unique class names that don't clash.
+postcss is defined in postcss.config.js  
+
+*/
+
+
+.cardContainer {
+  padding: 1rem;
+  border: 1px solid #ccc;
+  background-color: gold;
+}
