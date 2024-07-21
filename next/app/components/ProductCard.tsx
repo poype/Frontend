@@ -1,15 +1,19 @@
-"use client"
+"use client";
 
 import React from "react";
-import styles from "./ProductCard.module.css"
+import styles from "./ProductCard.module.css";
 
 const ProductCard = () => {
   return (
-    <div className={styles.cardContainer}>
-      <button onClick={() => console.log('Click')}>Add to Cart</button>
-    </div>
-  )
-  
+    <>
+      <div className={styles.cardContainer}>
+        <button onClick={() => console.log("Click")}>Add to Cart</button>
+      </div>
+      <div className="p-5 my-5 bg-sky-400 text-white text-xs hover:bg-sky-500">
+        <button onClick={() => console.log("Click 2222")}>Add to Cart</button>
+      </div>
+    </>
+  );
 };
 
 export default ProductCard;
