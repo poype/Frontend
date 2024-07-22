@@ -1,0 +1,12 @@
+In Next.js we have a built in router that is based on the file system.
+To make route publicly accessible, we have to put a special page file in that folder.
+Only page.tsx file is publicly accessible.
+
+Beside page.tsx file, we have some other special files for router.
+layout.tsx file for defining a common layout for pages.
+loading.tsx for showing loading UIs.
+route.tsx for creating APIs.
+not-found.tsx for showing custom errors.
+error.tsx for for showing general custom error pages.
+
+
