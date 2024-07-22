@@ -12,6 +12,7 @@ const ProductCard = () => {
       <div className="p-5 my-5 bg-sky-400 text-white text-xs hover:bg-sky-500">
         <button onClick={() => console.log("Click 2222")}>Add to Cart</button>
       </div>
+      <button className="btn btn-primary" onClick={() => console.log("Click 3333")}>Test DaisyUI</button>
     </>
   );
 };
