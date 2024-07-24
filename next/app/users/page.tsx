@@ -1,4 +1,6 @@
+import Link from "next/link";
 import React from "react";
+import { sort } from 'fast-sort';
 
 interface User {
   id: number;
@@ -6,7 +8,13 @@ interface User {
   email: string;
 }
 
-const UsersPage = async () => {
+interface Props {
+  searchParams: {
+    sortOrder: string;
+  }
+}
+
+const UsersPage = async ({searchParams: { sortOrder }}: Props) => {
   // in the server component, we can use the fetch funtion to send HTTP requests to the backend.
   const res = await fetch("https://jsonplaceholder.typicode.com/users");
   
@@ -27,6 +35,8 @@ const UsersPage = async () => {
   
   const users: User[] = await res.json();
 
+  const sortedUsers = sort(users).asc(sortOrder === "name" ? u => u.name : u => u.email);
+
   return (
     <>
       <h1>Users</h1>
@@ -42,12 +52,16 @@ const UsersPage = async () => {
       <table className="table">
         <thead>
           <tr>
-            <th>Name</th>
-            <th>Email</th>
+            <th>
+              <Link href="/users?sortOrder=name">Name</Link>
+            </th>
+            <th>
+              <Link href="/users?sortOrder=email">Email</Link>
+            </th>
           </tr>
         </thead>
         <tbody>
-          {users.map(user => <tr className="hover">
+          {sortedUsers.map(user => <tr className="hover">
             <td>{user.name}</td>
             <td>{user.email}</td>
           </tr>)}
