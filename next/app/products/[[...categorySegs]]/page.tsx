@@ -12,7 +12,7 @@ const ProductPage = ({ params: { categorySegs } }: Props) => {
     <div>
       ProductPage
       <ul>
-        {categorySegs.map((category) => <li>{category}</li>)}
+        {categorySegs && categorySegs.map((category) => <li>{category}</li>)}
       </ul>
     </div>
   )
