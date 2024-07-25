@@ -39,6 +39,7 @@ const UsersPage = async ({searchParams: { sortOrder }}: Props) => {
 
   return (
     <>
+      <Link href="/users/new">New User</Link>
       <h1>Users</h1>
       {/* in develop mode, we will get a new time value in each request.
           but if you build this application for production, you will see that the timestamp is not going to change.
