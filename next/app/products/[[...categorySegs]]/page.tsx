@@ -15,7 +15,7 @@ const ProductPage = ({ params: { categorySegs }, searchParams: { searchOrder } }
     <div>
       ProductPage
       <ul>
-        {categorySegs && categorySegs.map((category) => <li>{category}</li>)}
+        {categorySegs && categorySegs.map((category) => <li key={category}>{category}</li>)}
       </ul>
 
       searchOrder: {searchOrder}

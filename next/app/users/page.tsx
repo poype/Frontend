@@ -62,7 +62,7 @@ const UsersPage = async ({searchParams: { sortOrder }}: Props) => {
           </tr>
         </thead>
         <tbody>
-          {sortedUsers.map(user => <tr className="hover">
+          {sortedUsers.map(user => <tr className="hover" key={user.id}>
             <td>{user.name}</td>
             <td>{user.email}</td>
           </tr>)}
