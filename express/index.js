@@ -2,6 +2,12 @@ const express = require("express");
 
 const app = express();
 
+const users = [
+  { id: 1, name: "Mick" },
+  { id: 2, name: "John" },
+  { id: 3, name: "Lily" },
+];
+
 app.get("/", (req, res) => {
   res.send("Hello Express");
 });
@@ -10,7 +16,14 @@ app.get("/", (req, res) => {
 app.get("/api/user/:id", (req, res) => {
   const userId = req.params.id;
   console.log(`userId is ${userId}`);
-  res.send(userId);
+
+  const user = users.find((item) => item.id === parseInt(userId));
+
+  if (!user) {
+    res.status(404).send("User Not Found!");
+  }
+
+  res.send(user);
 });
 
 // http://localhost:3000/api/posts/2024/1?sortby=name
