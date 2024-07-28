@@ -2,6 +2,9 @@ const express = require("express");
 
 const app = express();
 
+// enable parsing json to body object of request
+app.use(express.json());
+
 const users = [
   { id: 1, name: "Mick" },
   { id: 2, name: "John" },
@@ -24,6 +27,18 @@ app.get("/api/user/:id", (req, res) => {
   }
 
   res.send(user);
+});
+
+app.post("/api/user", (req, res) => {
+  const newUser = {
+    id: users.length + 1,
+    name: req.body.name,
+  };
+  users.push(newUser);
+
+  console.log(`Users is ${JSON.stringify(users)}`);
+
+  res.send(newUser);
 });
 
 // http://localhost:3000/api/posts/2024/1?sortby=name
