@@ -6,7 +6,7 @@ const app = express();
 // enable parsing json to body object of request
 app.use(express.json());
 
-const users = [
+let users = [
   { id: 1, name: "Mick" },
   { id: 2, name: "John" },
   { id: 3, name: "Lily" },
@@ -52,6 +52,42 @@ app.post("/api/user", (req, res) => {
   console.log(`Users is ${JSON.stringify(users)}`);
 
   res.send(newUser);
+});
+
+app.put("/api/user/:id", (req, res) => {
+  const userId = req.params.id;
+
+  const user = users.find((item) => item.id === parseInt(userId));
+
+  if (!user) {
+    res.status(404).send("User Not Found!");
+    // here return is required.
+    return;
+  }
+
+  user.name = req.body.name;
+
+  console.log(users);
+
+  res.send(user);
+});
+
+app.delete("/api/user/:id", (req, res) => {
+  const userId = req.params.id;
+
+  const user = users.find((item) => item.id === parseInt(userId));
+
+  if (!user) {
+    res.status(404).send("User Not Found!");
+    // here return is required.
+    return;
+  }
+
+  users = users.filter((item) => item.id !== parseInt(userId));
+
+  console.log(users);
+
+  res.status(200).send();
 });
 
 // http://localhost:3000/api/posts/2024/1?sortby=name
