@@ -1,4 +1,5 @@
 const express = require("express");
+const Joi = require("joi");
 
 const app = express();
 
@@ -30,6 +31,18 @@ app.get("/api/user/:id", (req, res) => {
 });
 
 app.post("/api/user", (req, res) => {
+  const schema = {
+    name: Joi.string().min(3).required(),
+  };
+  const result = Joi.validate(req.body, schema);
+  console.log(result);
+
+  if (result.error) {
+    // 400 bad request
+    res.status(400).send(result.error.details[0].message);
+    return;
+  }
+
   const newUser = {
     id: users.length + 1,
     name: req.body.name,
