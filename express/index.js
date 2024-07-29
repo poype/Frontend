@@ -5,6 +5,20 @@ const app = express();
 
 // enable parsing json to body object of request
 app.use(express.json());
+// app.use(express.urlencoded({ extended: true }));
+
+// middleware function is like Aspect
+app.use(function (req, res, next) {
+  console.log("Logging...");
+  next();
+  console.log("Exit Logging...");
+});
+
+app.use(function (req, res, next) {
+  console.log("Authenticating...");
+  next();
+  console.log("Exit Authenticating...");
+});
 
 let users = [
   { id: 1, name: "Mick" },
