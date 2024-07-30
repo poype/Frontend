@@ -1,0 +1,4 @@
+tsc --init    // create a configuration file called tsconfig.json
+
+tsc    // with tsconfig.json file in place, we can compile our code simply by running tsc without any arguments
+
