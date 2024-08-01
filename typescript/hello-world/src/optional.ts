@@ -29,3 +29,15 @@ let ride = {
 // Nullish coalescing operator
 console.log(ride.currentSpeed);
 
+
+
+function processEvents(): never {
+  while (true) {
+    console.log("process events...");
+  }
+}
+
+
+processEvents();
+// never means that the code after the function calling will never be executed.
+console.log('Unreachable code');
