@@ -10,3 +10,14 @@ function calculateTax(income: number, taxYear: number = 2022): number {
 calculateTax(10_000, 2019);
 calculateTax(10_000, 2024);
 calculateTax(10_000);
+
+
+function greet(name: string | null | undefined) {
+  if (name) {
+    console.log(name.toUpperCase());
+  } else {
+    console.log("Hola");
+  }
+}
+
+greet(null);
