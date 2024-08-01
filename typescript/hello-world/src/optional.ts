@@ -19,3 +19,13 @@ function getArray(flag: boolean): Customer[] | null {
 const arr = getArray(false);
 console.log(arr?.[1]?.birthday);
 
+
+let speed: number | null = null;
+
+let ride = {
+  currentSpeed: speed ?? 30
+}
+
+// Nullish coalescing operator
+console.log(ride.currentSpeed);
+
