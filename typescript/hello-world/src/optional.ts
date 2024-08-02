@@ -40,4 +40,4 @@ function processEvents(): never {
 
 processEvents();
 // never means that the code after the function calling will never be executed.
-console.log('Unreachable code');
+// console.log('Unreachable code');
