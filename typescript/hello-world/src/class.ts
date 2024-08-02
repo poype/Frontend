@@ -49,3 +49,14 @@ console.log(account instanceof Account); // true, so instead of using typeof, we
 // set and get the value of balance through getter and setter.
 account.balance = 9999;
 console.log(account.balance);
+
+// Index Signature
+// Creating properties dynamicly, just like JavaScript. and can get type checking
+class SeatAssignment {
+  [seatNumber: string]: string;
+}
+
+let seats = new SeatAssignment();
+seats.A1 = "Mosh";
+seats["A2"] = "John";
+// seats.A3 = 1;   error
