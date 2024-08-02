@@ -3,7 +3,7 @@
 class Account {
   readonly id: number;
   owner: string;
-  private _balance: number;  // by conversion, the prefix of private property is _
+  private _balance: number; // by conversion, the prefix of private property is _
   nickname?: string; // nickname is optional, it doesn't have to appear in constructor
 
   constructor(id: number, owner: string, balance: number) {
@@ -20,14 +20,21 @@ class Account {
     this._balance += amount;
   }
 
-  getBalance(): number {
+  get balance(): number {
     return this._balance;
+  }
+
+  set balance(value: number) {
+    if (value < 0) {
+      throw new Error("Invalid value");
+    }
+    this._balance = value;
   }
 }
 
 let account = new Account(1, "Mosh", 0);
 account.deposit(100);
-console.log(account.getBalance());
+console.log(account.balance);
 
 console.log(typeof account); // object
 
@@ -39,3 +46,6 @@ console.log(account instanceof Account); // true, so instead of using typeof, we
 // public private protected,
 // when we declare properties, all properties are public by default
 
+// set and get the value of balance through getter and setter.
+account.balance = 9999;
+console.log(account.balance);
