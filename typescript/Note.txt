@@ -12,3 +12,6 @@ if you change some code, you must recompile code to generate new map file so tha
 npm install --save-dev @types/lodash
 - @types is definitely typed repository
 - this is purely for build time, so need "--save-dev"
+
+
+npx create-react-app reminders-app --template typescript
