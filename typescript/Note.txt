@@ -15,3 +15,12 @@ npm install --save-dev @types/lodash
 
 
 npx create-react-app reminders-app --template typescript
+
+
+***********ts-node***********
+-- integrate typescript into node project
+npm install --save-dev ts-node
+
+ts-node 会执行两步：
+1. tsc xxx.ts
+2. node xxx.js
