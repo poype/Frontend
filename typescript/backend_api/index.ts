@@ -1,3 +1,6 @@
-const message: string = "Hello World";
+import express from "express";
+const app = express();
 
-console.log(message);
+app.listen(8000, () => {
+  console.log("Server Started");
+});

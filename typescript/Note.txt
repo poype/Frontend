@@ -24,3 +24,17 @@ npm install --save-dev ts-node
 ts-node 会执行两步：
 1. tsc xxx.ts
 2. node xxx.js
+
+执行其它的 bash shell 命令：
+npm install express
+npm install --save-dev typescript
+npm install --save-dev @types/node
+npm install --save-dev @types/express
+
+tsc --init
+
+npm install --save-dev nodemon
+nodemon will use ts-node under the hood to compile and run  
+
+为什么已经全局安装了typescript，这里还要再安装？
+因为你无法假设所有engineer的电脑上都安装了typescript，为了能让所有人下载代码后就能将其run起来。这里会安装所有的依赖。
